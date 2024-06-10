@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Place</th>
+                <th>Center</th>
+                <th>Treatment Period</th>
+                <th>Sobriety Period</th>
+                <th>Reason for Soberness</th>
+                <th>Relapse Period</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            <% data.forEach(function(item, index) { %>
+                <tr>
+                    <td><%= item.year %></td>
+                    <td><%= item.place %></td>
+                    <td><%= item.center %></td>
+                    <td><%= item.tperiod_value %> <%= item.tperiod_unit %></td>
+                    <td><%= item.speriod_value %> <%= item.speriod_unit %></td>
+                    <td><%= item.reason === 'others' ? item.otherReason : item.reason %></td>
+                    <td><%= item.relapse_value %> <%= item.relapse_unit %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

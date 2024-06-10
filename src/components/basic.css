@@ -1,0 +1,327 @@
+.form-row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    background-color: #cccccc25;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+.form-row label {
+    width: auto;
+    text-wrap: nowrap;
+}
+
+.form-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.input-area{
+    display: flex; 
+    gap: 20px;
+    padding: 5px;
+    justify-content: start;
+    align-items: center;
+}
+
+.input{
+    padding: 10px 15px; 
+    color: rgba(0, 0, 0, 0.618);
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%;
+    transition: all 0.3s ease;
+    box-shadow: 1px 1px 8px #ccc;
+    margin: 8px 0;
+    outline: 2px solid transparent;
+}
+
+
+.input:focus{
+    border-color: rgba(0, 0, 255, 0.296);
+    outline-color:  rgba(0, 0, 255, 0.355);
+    outline-offset: 2px;
+}
+
+
+
+select option {
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.781);
+}
+
+select {
+    width: auto;
+    color: rgba(0, 0, 0, 0.618);
+}
+
+
+.label {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.666);
+    text-wrap: balance;
+    text-align: right;
+    width: 25%;
+    text-transform: capitalize;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ececec;
+}
+
+.header{
+    margin: 0;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 ;
+    transition: all 0.5s ease-in-out;
+    gap: 8px;
+    box-shadow: 3px 0 30px black;
+    backdrop-filter: blur(35px);
+}
+
+.header h2 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+}
+
+
+
+.header h3{
+    margin: 0;
+    color:rgba(255, 255, 255, 0.636);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.form {
+    margin: 150px auto ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    ;
+    background-color: white;
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.form-header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: #e7f0f8;
+    padding: 10px 25px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px #cccccc8f;
+    border: 1px solid #cccccc9d;
+}
+
+.form-header label {
+    width: auto;
+    text-wrap: nowrap;
+}
+
+.form-header h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    padding: 0 40px;
+    text-wrap: balance;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.66);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.221);
+    text-wrap: pretty;
+    letter-spacing: -1px;
+}
+
+
+.input-area-row{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: start;
+    gap: 8px;
+}
+
+.input-area-row input {
+    width: 110px ;
+}
+
+.form-body{
+    padding: 20px;
+}
+
+
+hr{
+    width: 80%;
+    margin: 20px auto; 
+    color: #ccc;
+}
+
+
+.submit{
+    background-color: #2f9821;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit:hover{
+    opacity: 80%;
+}
+
+
+.submit:active{
+    scale: 95%;
+}
+
+.clear{
+    padding: 5px 8px;
+    border-radius: 100px;
+    color: white;
+    background-color: rgba(182, 15, 15, 0.53);
+    border: none;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    cursor: pointer;
+    justify-self: center;
+    box-shadow: 3px 3px 15px black;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+}
+
+.clear:hover{
+    opacity: 80%;
+}
+
+.clear:active{
+    box-shadow: 3px 3px 10px black;
+    scale: 90%;
+}
+
+
+
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin: 0 auto; /* Divide value of min-width by 2 */
+    background-color: #e9d0d0e9; /* Black background color */
+    color: #971d1d; /* White text color */
+    border-radius: 2px; /* Rounded borders */
+    padding: 5px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 35%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.56);
+
+    border-radius: 10px;
+    border: 1px solid #7b0e0e30 ;
+  }
+
+  #snackbar h5 {
+    font-size: 18px ;
+    text-align: center;
+    margin: 45px 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+
+  }
+
+  #snackbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 15px 8px;
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+  .snackbar-button {
+    position: relative;
+    float: right;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    display: flex;
+    margin: 5px 5px;
+    flex-direction: column;
+    gap: 2px;
+    background-color: transparent;
+    border: none;
+    color: #971d1d;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  .snackbar-button:focus{
+    scale: 95%;
+  }
+
+  .snackbar-button img {
+    color: #971d1d;
+  }
+
+
+  
+
+  
